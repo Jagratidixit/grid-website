@@ -1,0 +1,66 @@
+body{
+    background: #edf2f8;
+    font-family:'Barlow Semi Condensed',sans-serif ;
+    line-height: 1.7;
+    font-size:13px;
+}
+.testimonials{
+    width:1440px;
+    margin:100px auto ;
+    padding:20px ;
+    display: grid;/* on parent*/
+    grid-template-columns: repeat(4,1fr);/* (4 columns and width betweem them should be 1fr)*/
+
+}
+.card{
+    border: 4px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    margin:20px;
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpWOy0A3UUSZVv245EXB_jALy2R6s31DGo5A&usqp=CAU) ;
+    background-repeat: no-repeat;
+    background-position: top 10px right 100px;
+    box-shadow: rgba(17, 189, 212, 0.15) 0px 48px 100px ;
+}
+img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border:2px solid rgb(157,23,157);
+    margin-right:20px ;/*image se spaceright*/
+}
+.card-header{
+    display:flex;
+    margin-right: 10px;
+    text-align: center;
+}
+#logo{
+    font-size: 13px;
+    opacity:50%;
+}
+.card-quote{
+    font-size: 18px;
+    font-weight: 500;/*to make bold*/
+    margin:20px;
+
+}
+/* inspect grid lines which will be 1 greater than no of columns*/
+.card_info{
+    font-size: 16px;
+    margin: 10px;
+    line-height: 1.5em;
+
+}
+.card:nth-of-type(1){
+    grid-column: 1/3;
+}
+/* .card:nth-of-type(4){
+    grid-row: 1/3;
+} */
+.card:nth-of-type(5){
+    grid-column: 2/4;
+}
+.card:nth-of-type(3){
+    grid-column: 4/5;/*4/5 means after inspecting 4to 5 column*/
+    grid-row: 1/3;/*1/3 means after inspecting 1to 3 row*/
+}
